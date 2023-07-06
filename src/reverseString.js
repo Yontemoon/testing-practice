@@ -1,9 +1,8 @@
 function reverseString(str) {
-    // if(typeof str === 'number') {
-    //     console.log(typeof str)
-    // }
+    if (typeof str === 'number') {
+        str = str.toString()
+    }
     return str.split('').reverse().toString().replaceAll(",", "");
 }
 
-console.log(reverseString(12345))
 module.exports = reverseString;
