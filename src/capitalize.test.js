@@ -2,6 +2,7 @@ const capitalize = require('./capitalize.js');
 const reverseString = require('./reverseString.js');
 const calculator = require ('./calculator.js');
 const caesarCipher = require('./caesarCipher.js');
+const analyzeArray = require('./analyzeArray.js');
 
 test(`Should return a string with the first word capitalized.`, () => {
     expect(capitalize('weeeeee')).toBe('Weeeeee');
@@ -50,5 +51,9 @@ test('Caesar cipher is working properly.', () => {
 
 test('Caesar cipher is working properly.', () => {
     expect(caesarCipher('QUICK DO & ! = #', 12)).toBe('CGUOW PA & ! = #');
+})
+
+test('Testing if an array will return an object with the average, min, max, and length properties', () => {
+    expect(analyzeArray([1,2,3,4,5])).toEqual({average: 3, min: 1, max: 5, length: 5})
 })
 
